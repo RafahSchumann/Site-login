@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Home </title>
+  <style>
+    /* estilos para o cabeçalho */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* estilos para o conteúdo */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      margin: 30px;
+    }
+
+    .box {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+    /* estilos para o rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+/* estilos para o botão hambúrguer */
+.hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 100%;
+      height: 2px;
+      background-color: rgb(170, 169, 169);
+      border-radius: 10px;
+    }
+
+    /* estilos para o menu */
+    #menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu li {
+      margin: 10px 0;
+    }
+
+    #menu a {
+      color: rgb(37, 37, 37);
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      color: rgb(241, 234, 234);
+    }
+    /* Estilo para paragrafo */
+    p {
+        text-align: flex;
+    }
+    
+    footer{
+        margin-top: 105px;
+    }
+
+    body{ 
+      background-color: darkgray;
+    }
+  </style>
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Seja bem vindo Hogwarts</h1>
+    
+
+  </header>
+
+  <h2> Aqui jaz Dobby, um elfo livre. </h2>
+
+  <div class="container">
+    <div class="box" id="box1"><img src="fotos/foto1.png"></div> 
+       <p>
+        Mas a vida não é como a escola. Na escola, se você errar, pode tentar de novo amanhã. <br> Mas na vida, quando tudo está a um segundo diante de ti, você não sabe como é.
+      </p>
+    <div class="box" id="box2"><img src="fotos/foto2.png"></div> 
+       <p> 
+        Hogwarts deveria ensinar como entender as cabeças das mulheres, <br> seria mais útil do que as aulas de adivinhação.
+      </p>
+    <div class="box" id="box3"><img src="fotos/foto3.png"></div>
+       <p>
+        Pode se encontrar a felicidade mesmo nas horas mais sombrias, <br> se a pessoa se lembrar de acender a luz.
+      </p>
+  </div>
+     
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav id="menu">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="sobre-a-empresa.html">Sobre a empresa</a></li>
+     </ul>
+  </nav>
+  
+  <footer>
+    Todos os direitos reservados
+  </footer>
+  
+  <script>
+    // pegar referências para os boxes
+    const box1 = document.querySelector("#box1");
+    const box2 = document.querySelector("#box2");
+    const box3 = document.querySelector("#box3");
+
+    // adicionar evento de clique nos boxes
+    box1.addEventListener("click", function() {
+      box1.style.backgroundColor = "#f00";
+    });
+    box2.addEventListener("click", function() {
+      box2.style.backgroundColor = "#f00";
+    });
+    box3.addEventListener("click", function() {
+      box3.style.backgroundColor = "#f00";
+    });
+
+ // função para mostrar ou esconder o menu
+ function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
